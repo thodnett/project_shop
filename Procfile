@@ -1,1 +1,1 @@
-web: gunicorn bc_shop.wsgi:application
+web: gunicorn bc_shop.wsgi
