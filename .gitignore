@@ -1,8 +1,4 @@
 env.py
 .sqlite3
-requirements.txt
-*.png
-static/
-media/
 __pycache__
 .~c9*
