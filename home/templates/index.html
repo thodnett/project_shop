@@ -1,4 +1,63 @@
-{% extends base.html %}
+{% extends 'base.html' %}
+{% load staticfiles %}
 
+{% block title %} Happy Planet | Home{% endblock %}
 {% block content %}
+
+<div class="jumbotron jumbotron-fluid">
+    <div class="container-fluid">
+        <h1 class="display-4">Saving the world!</h1>
+        <p class="lead">Providing sustainable, eco-friendly, everyday products that are good for the planet!.</p>
+    </div>
+    <div class="col s12 m5 xl7">
+        <a class="btn bg-red modal-trigger" href="#start-modal">Start Shopping</a>
+    </div>
+</div>
+
+<section class="index-section">
+        <div class="container">
+            <!-- Who We Are -->
+            <div class="row large-spaced">
+                <h5 class="center bold small-spaced">Our Ethos</h5>
+                <!-- Column w/Logo -->
+                <div class="col s12 m6 l4 offset-l2 small-spaced">
+                    <img class="logo-resize-md" src="{% static '' %}" alt="Logo"/>
+                </div>
+                <!-- Column -->
+                <div class="col s12 m6 small-spaced">
+                    <p>Here at Happy Planet, we aim to provide a selection of sustainable products that help reduce to reduce plastic use and waste.</p>
+                    <br/>
+                    <br/>We believe that small changes in everyone's lifestyles can contribute to negating the effects of climate change and the destruction of our planet</p>
+                </div>
+            </div>
+            
+                <div class="row center">
+                    <a class="btn bg-red" href="{% url 'all_products' %}">View Products</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Modal Structure -->
+    <div id="start-modal" class="modal">
+        <div class="modal-content">
+            <h4 class="bold center">Start Shopping</h4>
+            <p>Want to set up an account to purchase and review products? Simply <a href="{% url 'registration' %}">create an account</a>
+            and then view the <a href="{% url 'all_products' %}">our products</a> on our site and purchase them!</p>
+            <div class="row center">
+                <div class="col s6">
+                    <a class="btn bg-red" href="{% url 'registration' %}">Register</a>
+                </div>
+                <div class="col s6">
+                    <a class="btn" href="{% url 'all_products' %}">View Products</a>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
+    </div>
+
+
+
 {% endblock %}
