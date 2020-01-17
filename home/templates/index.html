@@ -4,6 +4,9 @@
 {% block title %} Happy Planet | Home{% endblock %}
 {% block content %}
 
+
+
+
 <div class="jumbotron jumbotron-fluid">
     <div class="container-fluid">
         <h1 class="display-4">Saving the world!</h1>
@@ -27,7 +30,8 @@
                 <div class="col s12 m6 small-spaced">
                     <p>Here at Happy Planet, we aim to provide a selection of sustainable products that help reduce to reduce plastic use and waste.</p>
                     <br/>
-                    <br/>We believe that small changes in everyone's lifestyles can contribute to negating the effects of climate change and the destruction of our planet</p>
+                    <br/>We believe that small changes in everyone's lifestyles can contribute to negating the effects of climate change and the destruction of our planet.
+                 Wondering how to stop global warming? Reduce your own carbon footprint by following a few easy steps. Make conserving energy a part of your daily routine and your decisions as a consumer</p>
                 </div>
             </div>
             
@@ -36,28 +40,66 @@
                 </div>
             </div>
         </div>
-    </section>
+        
+<table class="table table-hover table-dark">
+  <thead>
+    <tr>
+      <th scope="col"></th>
+      <th scope="col">Non-reusable</th>
+      <th scope="col">Reusable</th>
+    </tr>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Clingfilm</td>
+      <td>Beeswax wraps</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Plastic Bottles</td>
+      <td>Stainless Steel bottle</td>
+    </tr>
+   <tr>
+      <th scope="row">2</th>
+      <td>Single use Coffee Cups</td>
+      <td>Keep Cup</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Plastic Straws</td>
+      <td>Steel Straws</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Plastic Toothbrush</td>
+      <td>Bamboo Toothbrush</td>
+    </tr>
+  </tbody>
+</table>
+
+</section>
     
-    <!-- Modal Structure -->
-    <div id="start-modal" class="modal">
-        <div class="modal-content">
-            <h4 class="bold center">Start Shopping</h4>
-            <p>Want to set up an account to purchase and review products? Simply <a href="{% url 'registration' %}">create an account</a>
-            and then view the <a href="{% url 'all_products' %}">our products</a> on our site and purchase them!</p>
-            <div class="row center">
-                <div class="col s6">
-                    <a class="btn bg-red" href="{% url 'registration' %}">Register</a>
-                </div>
-                <div class="col s6">
-                    <a class="btn" href="{% url 'all_products' %}">View Products</a>
-                </div>
-            </div>
-        </div>
-        <div class="modal-footer">
-            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
-        </div>
+   <!-- Modal Structure -->
+   <div id="mymodal" data-backdrop="false" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Register!</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Register and receive 10% off your first order!</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="mymodal">Close</button>
+        <button type="button" class="btn btn-primary" href="{% url 'registration' %}">Register</button>
+      </div>
     </div>
-
-
+  </div>
+</div>
 
 {% endblock %}
