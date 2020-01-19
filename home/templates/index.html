@@ -12,9 +12,31 @@
         <h1 class="display-4">Saving the world!</h1>
         <p class="lead">Providing sustainable, eco-friendly, everyday products that are good for the planet!.</p>
     </div>
-    <div class="col s12 m5 xl7">
-        <a class="btn bg-red modal-trigger" href="#start-modal">Start Shopping</a>
+    <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+  Register for 10% off!
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="myModalLabel">Register</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+       <p class="reg">Register and receive 10% off your first order!</p>
+        <a class="btn bg-red" href="{% url 'registration' %}">Register here!!</a>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+      </div>
     </div>
+  </div>
+</div>
 </div>
 
 <section class="index-section">
@@ -41,7 +63,7 @@
             </div>
         </div>
         
-<table class="table table-hover table-dark">
+<table class="table table-dark">
   <thead>
     <tr>
       <th scope="col"></th>
@@ -81,25 +103,6 @@
 
 </section>
     
-   <!-- Modal Structure -->
-   <div id="mymodal" data-backdrop="false" tabindex="-1" role="dialog">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Register!</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <p>Register and receive 10% off your first order!</p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="mymodal">Close</button>
-        <button type="button" class="btn btn-primary" href="{% url 'registration' %}">Register</button>
-      </div>
-    </div>
-  </div>
-</div>
+   
 
 {% endblock %}

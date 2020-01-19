@@ -12,26 +12,7 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://kit.fontawesome.com/b6aa2fb26d.js" crossorigin="anonymous"></script>
-    <script>
-    $(function() {
-    // .modal-backdrop classes
-    $(".modal-fullscreen").on('show.bs.modal', function() {
-        setTimeout(function() {
-            $(".modal-backdrop").addClass("modal-backdrop-fullscreen");
-        }, 0);
-    });
-    $(".modal-fullscreen").on('hidden.bs.modal', function() {
-        $(".modal-backdrop").addClass("modal-backdrop-fullscreen");
-    });
-
-
-    $('#mymodal').modal().fadeIn(1000); // Here x = 1000
-
-});
-  
     
-</script>
-
     {% block head_js %}
     {% endblock head_js %}
 </head>
@@ -114,7 +95,7 @@
 </footer>
 
 
-
+<script type="text/javascript" $('#myModal').modal('show') ></script>
 
 
 </body>
