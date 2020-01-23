@@ -1,4 +1,16 @@
-* {
-    color: black;
+@import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');
+
+/* style navbar and fontawesome icons */
+
+#navbar  {
+    color: #cfcfc4;
+    font-family: 'Oswald', sans-serif;
     
 }
+
+
+.fas {
+    color: #ffffff;
+}
+
+
