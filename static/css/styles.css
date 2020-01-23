@@ -2,15 +2,17 @@
 
 /* style navbar and fontawesome icons */
 
-#navbar  {
-    color: #cfcfc4;
+.navbar {
+    background-color: #D3D3D3;
     font-family: 'Oswald', sans-serif;
+    color: white;
     
 }
 
-
-.fas {
-    color: #ffffff;
+#footer {
+    background-color: black;
 }
 
-
+.jumbotron {
+    background-color: black;
+}
