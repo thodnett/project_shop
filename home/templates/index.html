@@ -2,103 +2,78 @@
 {% load staticfiles %}
 
 {% block title %} Happy Planet | Home{% endblock %}
+
 {% block content %}
 
-
-
-
-<div class="jumbotron jumbotron-fluid">
-    <div class="container-fluid">
-        <h1 class="display-4">Saving the world!</h1>
-        <p class="lead">Providing sustainable, eco-friendly, everyday products that are good for the planet!.</p>
+<div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active" data-interval="10000">
+      <img src="{{MEDIA_URL}}images/baby.jpg" class="d-block w-100" alt="baby">
     </div>
-    <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
-  Register for 10% off!
-</button>
-
-<!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="myModalLabel">Register</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-       <p class="reg">Register and receive 10% off your first order!</p>
-        <a class="btn bg-red" href="{% url 'registration' %}">Register here!!</a>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-      </div>
+    <div class="carousel-item" data-interval="2000">
+      <img src="{{MEDIA_URL}}images/beeswax.jpg" class="d-block w-100" alt="wraps">
+    </div>
+    <div class="carousel-item">
+      <img src="{{MEDIA_URL}}images/shampoo.jpg" class="d-block w-100" alt="bottle">
     </div>
   </div>
-</div>
+  <a class="carousel-control-prev" href="#carouselExampleInterval" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleInterval" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
 </div>
 
-<section class="index-section">
-        <div class="container">
-            <!-- Who We Are -->
-            <div class="row large-spaced">
-                <h5 class="center bold small-spaced">Our Ethos</h5>
-                <!-- Column -->
-                <div class="col s12 m6 small-spaced">
-                    <p>Here at Happy Planet, we aim to provide a selection of sustainable products that help reduce to reduce plastic use and waste.</p>
-                    <br/>
-                    <br/>We believe that small changes in everyone's lifestyles can contribute to negating the effects of climate change and the destruction of our planet.
-                 Wondering how to stop global warming? Reduce your own carbon footprint by following a few easy steps. Make conserving energy a part of your daily routine and your decisions as a consumer</p>
-                </div>
-            </div>
-            
-                <div class="row center">
-                    <a class="btn bg-red" href="{% url 'all_products' %}">View Products</a>
-                </div>
-            </div>
-        </div>
-        
-<table class="table table-dark">
-  <thead>
-    <tr>
-      <th scope="col"></th>
-      <th scope="col">Non-reusable</th>
-      <th scope="col">Reusable</th>
-    </tr>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Clingfilm</td>
-      <td>Beeswax wraps</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Plastic Bottles</td>
-      <td>Stainless Steel bottle</td>
-    </tr>
-   <tr>
-      <th scope="row">2</th>
-      <td>Single use Coffee Cups</td>
-      <td>Keep Cup</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Plastic Straws</td>
-      <td>Steel Straws</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Plastic Toothbrush</td>
-      <td>Bamboo Toothbrush</td>
-    </tr>
-  </tbody>
-</table>
 
+<hr>
+<section class="about">
+ <div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+      <h3>About Us</h3>
+      <p>We love our planet and its beauty, we strive to provide products that do too!</p>
+    </div>
+    <div class="col-sm-4">
+      <h3>Our Products</h3>
+      <p>From household products to beauty products you can find them all here!</p>
+    </div>
+    <div class="col-sm-4">
+      <h3>Fun Facts</h3>
+      <p>A glass bottle made in our time will take more than 4,000 years to decompose!</p>
+    </div>
+  </div>
+</div> 
 </section>
-    
-   
 
+
+<hr>
+<ul class="list-unstyled center-align">
+  <li class="media">
+    <div class="media-body">
+       <img src="{{MEDIA_URL}}images/bamboo_toothbrush.jpg" class="img-thumbnail" alt="home">
+      <h5>Home</h5>
+    <p>We have a range of planet friendly products for your home.</p>
+    <a class="btn btn-secondary" href="{% url 'all_products' %}">Find</a>
+    </div>
+  </li>
+  <li class="media my-4">
+    <div class="media-body">
+        <img src="{{MEDIA_URL}}images/shampoo.jpg" class="img-thumbnail" alt="beauty">
+      <h5>Beauty</h5>
+   <p>All the eco-friendly beauty products, to keep you looking your best.</p>
+   <a class="btn btn-secondary" href="{% url 'all_products' %}">Find</a>
+    </div>
+  </li>
+  <li class="media">
+    <div class="media-body">
+      <img src="{{MEDIA_URL}}images/baby.jpg" class="img-thumbnail" alt="baby">
+      <h5>Baby</h5>
+    <p>Children can be kind to the planet too, find all you need here.</p>
+    <a class="btn btn-secondary" href="{% url 'all_products' %}">Find</a>
+    </div>
+  </li>
+</ul>
 {% endblock %}

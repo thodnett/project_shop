@@ -1,18 +1,59 @@
 @import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');
 
-/* style navbar and fontawesome icons */
+.body {
+     font-family: 'Oswald', sans-serif;
+}
 
-.navbar {
-    background-color: #D3D3D3;
+.nav-link {
+    color: white;
     font-family: 'Oswald', sans-serif;
+}
+
+.fas {
+   color: white; 
+    
+}
+
+.jumbotron {
+    height: 500px;
+    width: 100%;
+    background-repeat: no-repeat;
+}
+
+
+.img-thumbnail {
+    width: 200px;
+    height: 200px;
+}
+
+.media-body {
+    text-align: center;
+}
+
+.card-img-top {
+    width: 400px;
+    height: 400px;
+}
+
+
+
+
+/*-----footer------*/
+
+#footer {
+    background-color: black;
+    padding: 10em;
+    text-align: center;
+}
+
+#footer a {
+    margin: 0px 15px;
     color: white;
     
 }
 
-#footer {
-    background-color: black;
+#footer hr {
+    width: 50%;
+    border-top: 1px solid #ffffff;
 }
 
-.jumbotron {
-    background-color: black;
-}
