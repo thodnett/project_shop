@@ -32,15 +32,17 @@
       <a class="nav-link" href="{% url 'logout' %}"><i class="fas fa-sign-out-alt"></i>Log Out</a>
     </li>
     <li class="nav-item">
+      <a class="nav-link" href="{% url 'all_reviews' %}"><i class="fas fa-user"></i>Reviews</a>
+    </li>
+    <li class="nav-item">
       <a class="nav-link" href="{% url 'all_products' %}"><i class="fas fa-store"></i>Shop</a>
     </li>
-     <li class="nav-item">
+    <li class="nav-item">
             <a class="nav-link" href="{% url 'view_cart' %}">
                             <i class="fas fa-shopping-cart"></i>Cart</a>
                             {% if product_count > 0 %}
             <label class="badge badge-warning">{{ product_count }}</label>
-      </li>
-      
+    </li>
     {% endif %} 
     {% else %} 
 <li class="nav-item">
@@ -52,8 +54,18 @@
      <li class="nav-item">
       <a class="nav-link" href="{% url 'all_products' %}"><i class="fas fa-store"></i>Shop</a>
     </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'all_reviews' %}"><i class="fas fa-user"></i>Reviews</a>
+    </li>
+    <li class="nav-item">
+            <a class="nav-link" href="{% url 'view_cart' %}">
+                            <i class="fas fa-shopping-cart"></i>Cart</a>
+                            {% if product_count > 0 %}
+            <label class="badge badge-warning">{{ product_count }}</label>
+    </li>
   </ul>
-{% endif %} 
+  {% endif %}
+  {% endif %}
 </nav>
 
 
@@ -101,6 +113,10 @@
 $('.carousel').carousel({
   interval: 2000
 });
+$('#myModal').on('shown.bs.modal', function () {
+  $('#myInput').trigger('focus')
+});
+
     
 </script>
 </html>

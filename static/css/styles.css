@@ -35,10 +35,25 @@
     height: 400px;
 }
 
+.display {
+    margin: 50px;
+    padding: 10px;
+}
 
+.product {
+    width: 400px;
+    height: 400px;
+}
 
+.row {
+    margin: 50px;
+}
 
-/*-----footer------*/
+.row2 {
+    margin: 50px;
+}
+
+  /*-----footer------*/
 
 #footer {
     background-color: black;

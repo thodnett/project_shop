@@ -1,19 +1,57 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<div class='row row-flex'>
     {% for review in reviews %}
 
-    <div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-6 col-md-4 display panel panel-default">
-            <div class="panel-body">
-                <div class="review"></div>
-
-                <h3>{{ review.product_name }}</h3>
-                <p class="product-review">{{ review.comment}} {{review.user_name}}{{review.rating}} </p>
+  <div class="container">
+    <div class="row">
+        <div class="card col-sm">
+            <div class="card-body text-center">
+                <h4 class="card-title">{{ review.user_name}}</h4>
+                <h3 class="card-text text-center">{{  review.product_name }}</h3>
+                <p class="card-text text-center">{{ review.comment }}</p>
+                <h3 class="card-text text-center">{{  review.rating }}</h3>
                 
                
-
+            </div>
         </div>
-    {% endfor %}
+    </div>
 </div>
+
+
+{% endfor %}
+
+{% if user.is_authenticated %}
+
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Add Review</button>
+
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+       <form method="post" action="{% url 'all_reviews' review.id %}">
+                    {% csrf_token %}
+   <div class="form-group">
+    <label for="exampleFormControlInput1">Username</label>
+    <input type="email" class="form-control" id="exampleFormControlInput2" placeholder="username">
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlSelect1">Rating</label>
+    <select class="form-control" id="exampleFormControlSelect1">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">Comment</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+  </div>
+</form>
+    </div>
+  </div>
+</div>
+
+{% endif %}
 {% endblock %}

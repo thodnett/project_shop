@@ -32,7 +32,7 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', index,  name='index'),
     url(r'^all_products', all_products,  name='all_products'),
-    url(r'^all_reviews/', all_reviews, name="reviews"),
+    url(r'^all_reviews/', all_reviews, name="all_reviews"),
     url(r'^accounts/', include(urls_accounts)),
     url(r'^products/', include(urls_products)),
     url(r'^cart/', include(urls_cart)),
