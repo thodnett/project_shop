@@ -21,37 +21,7 @@
 
 {% endfor %}
 
-{% if user.is_authenticated %}
 
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Add Review</button>
 
-<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-       <form method="post" action="{% url 'all_reviews' review.id %}">
-                    {% csrf_token %}
-   <div class="form-group">
-    <label for="exampleFormControlInput1">Username</label>
-    <input type="email" class="form-control" id="exampleFormControlInput2" placeholder="username">
-  </div>
-  <div class="form-group">
-    <label for="exampleFormControlSelect1">Rating</label>
-    <select class="form-control" id="exampleFormControlSelect1">
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
-    </select>
-  </div>
-  <div class="form-group">
-    <label for="exampleFormControlTextarea1">Comment</label>
-    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-  </div>
-</form>
-    </div>
-  </div>
-</div>
 
-{% endif %}
 {% endblock %}
