@@ -16,7 +16,7 @@ class LeaveReviewForm(forms.Form):
 
     product_name = forms.CharField(max_length=100)
     user_name = forms.CharField(max_length=100)
-    comment = forms.CharField(max_length=200)
+    comment = forms.CharField(widget=forms.Textarea, max_length=200)
     rating = forms.MultipleChoiceField(
         required=False,
         widget=forms.CheckboxSelectMultiple,

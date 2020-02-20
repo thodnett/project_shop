@@ -1,16 +1,23 @@
 
 {% extends 'base.html' %}
+{% load bootstrap_tags %}
 
 {% block content %}
 
 
-   
-  <form action="" method="post">
-    {% csrf_token %}
-    <table>
-    {{ form.as_table }}
-    </table>
+
+{% if submitted %}
+
+ <p class="success">
+   Your message was submitted successfully. Thank you.
+    </p>
+    
+{% else %}
+
+<form action="" method="POST" novalidate>
+{% csrf_token %}
+    {{ form | as_bootstrap}}
     <input type="submit" value="Submit">
   </form>
 
-{% endblock %}
+{% endif %} {% endblock %}

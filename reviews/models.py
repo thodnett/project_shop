@@ -15,7 +15,7 @@ class Review(models.Model):
 
     product_name = models.CharField(max_length=100, default=0)
     user_name = models.CharField(max_length=100)
-    comment = models.CharField(max_length=200)
+    comment = models.CharField(max_length=100)
     rating = models.IntegerField(choices=RATING_CHOICES)
     
 

@@ -33,7 +33,7 @@ urlpatterns = [
     url(r'^$', index,  name='index'),
     url(r'^all_products', all_products,  name='all_products'),
     url(r'^all_reviews/', all_reviews, name="all_reviews"),
-    url(r'^leave_review/(?P<pk>\d+)/$', leave_review, name='leave_review'),
+    url(r'^leave_review/', leave_review, name='leave_review'),
     url(r'^accounts/', include(urls_accounts)),
     url(r'^products/', include(urls_products)),
     url(r'^cart/', include(urls_cart)),
