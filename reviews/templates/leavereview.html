@@ -1,16 +1,16 @@
 
 {% extends 'base.html' %}
-{% load bootstrap_tags %}
 
 {% block content %}
 
 
-<form method="post">
+   
+  <form action="" method="post">
     {% csrf_token %}
-    
- 
- {{ LeaveReview_form | as_bootstrap }}
+    <table>
+    {{ form.as_table }}
+    </table>
     <input type="submit" value="Submit">
-</form>
+  </form>
 
 {% endblock %}

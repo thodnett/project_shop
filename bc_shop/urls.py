@@ -20,7 +20,7 @@ from accounts import urls as urls_accounts
 from products import urls as urls_products
 from products.views import all_products 
 from reviews import urls as urls_reviews
-from reviews.views import all_reviews, LeaveReviewForm
+from reviews.views import all_reviews, leave_review
 from cart import urls as urls_cart
 from search import urls as urls_search 
 from checkout import urls as urls_checkout
@@ -33,8 +33,8 @@ urlpatterns = [
     url(r'^$', index,  name='index'),
     url(r'^all_products', all_products,  name='all_products'),
     url(r'^all_reviews/', all_reviews, name="all_reviews"),
+    url(r'^leave_review/(?P<pk>\d+)/$', leave_review, name='leave_review'),
     url(r'^accounts/', include(urls_accounts)),
-    url(r'^your-review/', LeaveReviewForm, name="your-review"),
     url(r'^products/', include(urls_products)),
     url(r'^cart/', include(urls_cart)),
     url(r'^search/', include(urls_search)),
