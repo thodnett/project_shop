@@ -14,8 +14,8 @@
     
 {% else %}
 
-<form action="" method="POST" novalidate>
-{% csrf_token %}
+<form method="post">
+ {% csrf_token %}
     {{ form | as_bootstrap}}
     <input type="submit" value="Submit">
   </form>
