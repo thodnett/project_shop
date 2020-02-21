@@ -17,10 +17,10 @@ def all_reviews(request):
 def leave_review(request, id):
     
      form = LeaveReviewForm()
-     product = get_object_or_404(Product, pk=id)
+     product = get_object_or_404(Product, pk='id')
      if request.method == 'POST':
         form = LeaveReviewForm(request.POST)
-  
+ 
   
         if form.is_valid():
             review = form.save(commit= False)
@@ -31,5 +31,5 @@ def leave_review(request, id):
              
      else:
              form = LeaveReviewForm()
-     return render(request, 'leavereview.html', {'form': form, id : id})
+     return render(request, 'leavereview.html', {'form': form, 'id' : id})
          
