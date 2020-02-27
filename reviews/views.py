@@ -17,12 +17,13 @@ def leave_review(request):
     products = Product.objects.all()
     return render(request, "leavereview.html", {"products": products})
 
-def leave_reviewform(request, id):
-    
+def leave_reviewform(request, product_id):
+
      form = LeaveReviewForm()
-     product = get_object_or_404(Product, pk='id')
+     product = get_object_or_404(Product, pk=product_id)
      if request.method == 'POST':
         form = LeaveReviewForm(request.POST)
+        
  
   
         if form.is_valid():
@@ -34,5 +35,6 @@ def leave_reviewform(request, id):
              
      else:
              form = LeaveReviewForm()
-     return render(request, 'leavereview.html', {'form': form, 'id' : id})
+             context = {'product_id' : product_id}
+     return render(request, 'leavereviewform.html', {'form': form}, context)
          

@@ -14,12 +14,7 @@
         <div class="caption">
             <h3>{{product.name }}</h3>
             <p class="product-description">{{product.description }}</p>
-                
-                <form class="form-inline" method="post" action="{% url 'leave_reviewform' id %}">
-                    {% csrf_token %}
-                    {{ form }}
-                    <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span>Leave Review</button>
-                </form>
+                  <p>If you would like to leave a review, you can <a href="{% url 'product:leave_reviewform' pk=product.id %}">here! </a></p>
             </p>
         </div>
     </div>

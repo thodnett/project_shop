@@ -18,5 +18,6 @@ class Review(models.Model):
     comment = models.CharField(max_length=100)
     rating = models.IntegerField(choices=RATING_CHOICES)
     
+    
     def __str__(self):
         return self.product_name
