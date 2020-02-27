@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.urls import reverse
-from .models import Review
+from .models import Review, Product
 from products.models import Product
 from django.contrib.auth.models import User
 from .forms import LeaveReviewForm
@@ -13,8 +13,11 @@ def all_reviews(request):
     reviews = Review.objects.all()
     return render(request, "reviews.html", {"reviews": reviews})
     
+def leave_review(request):
+    products = Product.objects.all()
+    return render(request, "leavereview.html", {"products": products})
 
-def leave_review(request, id):
+def leave_reviewform(request, id):
     
      form = LeaveReviewForm()
      product = get_object_or_404(Product, pk='id')

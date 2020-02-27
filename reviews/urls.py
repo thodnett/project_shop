@@ -1,10 +1,11 @@
 from django.conf.urls import url, include
-from .views import all_reviews, leave_review
+from .views import all_reviews, leave_reviewform
 
 
 urlpatterns = [
     url(r'^$', all_reviews, name='reviews'),
-    url(r'^(?P<id>\d+)', leave_review, name='leave_review')
+    url(r'^leave_reviewform/(?P<id>\d+)/', leave_reviewform, name='leave_reviewform')
+  
    
    
 ]
