@@ -20,7 +20,7 @@ def leave_review(request):
 def leave_reviewform(request, product_id):
 
      form = LeaveReviewForm()
-     product = get_object_or_404(Product, pk=product_id)
+     product = get_object_or_404(Product, product_id)
      if request.method == 'POST':
         form = LeaveReviewForm(request.POST)
         

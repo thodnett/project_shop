@@ -34,6 +34,7 @@ urlpatterns = [
     url(r'^all_products', all_products,  name='all_products'),
     url(r'^all_reviews/', all_reviews, name="all_reviews"),
     url(r'^leave_review/', leave_review, name="leave_review"),
+    url(r'^leave_reviewform/(?P<product_id>\d+)', leave_reviewform, name='leave_reviewform'),
     url(r'^leave_reviewform/', include(urls_reviews)),
     url(r'^accounts/', include(urls_accounts)),
     url(r'^products/', include(urls_products, namespace='product')),
