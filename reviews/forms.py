@@ -7,5 +7,5 @@ class LeaveReviewForm(forms.ModelForm):
     
     class Meta:
         model = Review
-        fields = ['user_name', 'product_name', 'comment', 'rating']
+        fields = ['comment', 'rating']
         
